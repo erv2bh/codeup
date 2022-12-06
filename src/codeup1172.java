@@ -13,7 +13,7 @@ public class codeup1172 {
                 System.out.println(input_b+" "+input_c+" "+input_a);
             }
         }
-        if((input_b>=input_a) && (input_b>=input_c)) { //b가 a보다 크거나 같고 b가 c보다 크거나 같으면
+        else if((input_b>=input_a) && (input_b>=input_c)) { //b가 a보다 크거나 같고 b가 c보다 크거나 같으면
             if(input_a>input_c) { //a가 c보다 크면 c,a,b 순서로 출력한다
                 System.out.println(input_c+" "+input_a+" "+input_b);
             }
