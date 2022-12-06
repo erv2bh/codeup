@@ -1,3 +1,16 @@
+/*문제 설명
+세 수를 오름차순으로 정렬하려고 한다. (낮은 숫자 -> 높은 숫자)
+
+예)
+
+5 8 2   ====> 2 5 8    로 출력*/
+
+/*입력
+세 정수가 입력된다.*/
+
+/*출력
+낮은 숫자 부터 출력한다.*/
+
 import java.util.Scanner;
 public class codeup1172 {
     public static void main(String[] args) {
