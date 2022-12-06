@@ -5,7 +5,7 @@ public class codeup1172 {
         int input_a=sc.nextInt();
         int input_b=sc.nextInt();
         int input_c=sc.nextInt();
-        if((input_a>=input_b) & (input_a>=input_c)){ //a가 b보다 크거나 같고 a가 c보다 크거나 같으면
+        if((input_a>=input_b) && (input_a>=input_c)){ //a가 b보다 크거나 같고 a가 c보다 크거나 같으면
             if(input_b>input_c) { //b가 c보다 크면 c,b,a 순서로 출력한다
                 System.out.println(input_c+" "+input_b+" "+input_a);
             }
