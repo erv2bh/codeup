@@ -22,7 +22,7 @@ public class codeup1901 {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        f(n);
-    }//main end
+        int inputN = sc.nextInt();
+        f(inputN);
+    }
 }
