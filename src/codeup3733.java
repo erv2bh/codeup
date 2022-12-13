@@ -36,7 +36,7 @@ public class codeup3733 {
             return rain(n/2,length+1);
         }
     }
-/*inputA와 inputB를 입력받고 arr배열에 i부터 시작해서 rain함수에 i를 입력하여 호출한다. 값중 제일 큰 배열의 번호를 저장해서 그 번호와 값을 출력한다.*/
+/*inputA와 inputB를 입력받고 arr배열에 i부터 시작해서 rain함수에 i를 입력하여 호출한다. 값중 제일 큰 배열의 번호를 저장해서 그 번호와 값을 출력 한다.*/
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int inputA,inputB;
