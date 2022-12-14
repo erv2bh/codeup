@@ -15,17 +15,19 @@ N개의 입력 데이터가 주어지면 정렬해서 출력하시오.
 
 import java.util.Scanner;
 public class codeup3014 {
+    /*데이터 개수를 입력받고 데이터 개수만큼 arr배열에 데이터번째 배열의 수를 세준다
+    * i가 0부터 100000까지 arr배열의 해당 번째 배열 값동안 반복한 후 해당 번째 수를 출력한다*/
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int [] arr = new int [100001];
         int inputN = sc.nextInt();
         int data;
-        for(int i=1;i<=inputN;i++){ //데이터 개수만큼 데이터 입력받고 데이터번째 배열의 수를 세준다
+        for(int i=1;i<=inputN;i++){
             data=sc.nextInt();
             arr[data]++;
         }
         for(int i=0;i<=100000;i++){
-            for(int j=1;j<=arr[i];j++){ //arr 0번째 배열부터 시작해서 해당 번째 배열의 값동안 반복한후 해당번째 수를 출력한다.
+            for(int j=1;j<=arr[i];j++){
                 System.out.println(i);
             }
         }
