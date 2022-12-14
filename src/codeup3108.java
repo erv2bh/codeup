@@ -29,7 +29,7 @@ public class codeup3108 {
     static Olympiad [] arr = new Olympiad[100];
     static int count = 0;
     /*삽입 함수 정의
-    * 수험번호와 이름이 입력되고 arr배열에 수험번호가 겹치면 함수를 종료하고 겹치지 않으면 수험번호와 이름을 arr배열에 저장한다*/
+    * 수험번호와 이름이 입력되고 arr배열에 수험번호가 겹치면 함수를 종료하고 겹치지 않으면 수험번호와 이름을 arr배열에 저장하고 카운트수를 늘려준다 */
     public static void Insert(int code, String name){
         for(int i=0;i<count;i++){
             if(arr[i].code == code){
@@ -43,7 +43,8 @@ public class codeup3108 {
         count++;
     }
     /*삭제 함수 정의
-    * 수험번호가 입력되고 arr배열에 수험번호가 겹치면 해당 번째 배열을 지운다*/
+    * 수험번호가 입력되고 카운트만큼 반복하여 arr배열에 수험번호가 겹치면 해당 번째 배열을 지우고(해당 번째 배열 바로 뒷배열부터 덮어쓰기 한다)
+    * 카운트수를 줄여준다*/
     public static void Delete(int code){
         for(int i=0;i<count;i++){
             if(arr[i].code == code){
@@ -58,8 +59,8 @@ public class codeup3108 {
     /*데이터 개수가 입력되고 개수만큼 처리코드 수험번호 이름이 입력된다
     * 처리코드가 I이면 삽입 함수를 호출하여 수험번호를 비교한 후 데이터를 저장하고, 처리코드가 D이면 삭제 함수를 호출하여 수험번호를 비교한 후
     * 데이터를 삭제한다
-    * 정수 5개가 입력된다
-    * 데이터 값을 오름차순으로 정렬한다
+    * 정수 5개가 입력되고 list배열에 저장된다.
+    * 데이터 값을 수험번호를 기준으로 앞 수험번호가 뒷 수험번호보다 크면 순서를 바꿔주어 오름차순으로 정렬한다
     * 정수 5개의 각 정수번째 배열에 해당하는 데이터의 수험번호와 이름을 출력한다.*/
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
