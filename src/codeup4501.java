@@ -14,16 +14,19 @@
 
 import java.util.Scanner;
 public class codeup4501 {
+    /*7명의 난쟁이 키를 순서대로 입력받고 height배열에 각각 저장한다. 처음 난쟁이부터 시작해서 바로 뒤 난쟁이의 키와 비교한 후
+     앞 난쟁이의 키보다 클 경우 순서를 바꿔주어 내림차순으로 정렬한다
+      첫번째 난쟁이와 두번째 난쟁이의 키를 출력한다.*/
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         int [] height = new int[7];
 
-        for(int i=0;i<7;i++){ //7명의 난쟁이 키를 순서대로 입력받는다
+        for(int i=0;i<7;i++){
             height[i]=sc.nextInt();
         }
-        for(int i=0;i<6;i++){ //처음 난쟁이부터 시작해서 뒷 난쟁이의 키가 앞 난쟁이의 키보다 클 경우 키 순서를 바꿔준다
+        for(int i=0;i<6;i++){
             for(int j=0;j<6;j++){
-                if(height[j] > height[j+1]){
+                if(height[j] < height[j+1]){
                     int tmp;
                     tmp=height[j];
                     height[j]=height[j+1];
@@ -31,6 +34,6 @@ public class codeup4501 {
                 }
             }
         }
-        System.out.println(height[6]+" "+height[5]);
+        System.out.println(height[0]+" "+height[1]);
     }
 }
