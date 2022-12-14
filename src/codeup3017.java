@@ -22,11 +22,14 @@ class Student{
     int informatics;
 }
 public class codeup3017 {
+    /*학생수를 입력받고 입력받은 학생수만큼 arr배열을 생성한다. arr배열에 1부터 학생수만큼 번호(순서)와 수학성적과 정보성적을 저장한다
+    * 수학점수를 기준으로 앞점수가 뒷점수보다 작으면 바꿔주어 내림차순으로 정렬한 후 수학점수가 같을경우 정보점수 기준으로 내림차순 정렬해준다
+    * 만약 정보점수도 같다면 입력시 저장된 번호(순서) 순으로 내림차순 정렬해준다 */
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
-        int inputN= sc.nextInt(); //학생수 입력
-        Student[] arr = new Student[inputN]; //학생수만큼 배열 생성
-        for(int i=0;i<inputN;i++){ //arr 배열에 수학 정보성적 저장
+        int inputN= sc.nextInt();
+        Student[] arr = new Student[inputN];
+        for(int i=0;i<inputN;i++){
             Student student = new Student();
             student.id=i+1;
             student.math=sc.nextInt();
@@ -34,19 +37,19 @@ public class codeup3017 {
 
             arr[i]= student;
         }
-        //수학점수 기준으로 정렬 한 후 수학점수가 같을경우 정보점수 기준으로 정렬. 만약 정보점수도 같다면 입력시 부여된 번호 순으로 정렬한다
-        for(int i= arr.length - 1;i>0;i--){ //버블정렬
+
+        for(int i= arr.length - 1;i>0;i--){
             for(int j=0;j<i;j++){
-                if(arr[j].math < arr[j+1].math){ //수학성적을 첫번째 기준으로 정렬
+                if(arr[j].math < arr[j+1].math){
                     Student student = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1]=student;
-                } else if(arr[j].math == arr[j+1].math){ //수학점수가 같다면 정보점수로 정렬
+                } else if(arr[j].math == arr[j+1].math){
                     if(arr[j].informatics < arr[j+1].informatics){
                         Student student = arr[j];
                         arr[j] = arr[j+1];
                         arr[j+1] = student;
-                    }else if(arr[j].informatics == arr[j+1].informatics){ //정보점수가 같다면 번호순으로 정렬
+                    }else if(arr[j].informatics == arr[j+1].informatics){
                         if(arr[j].id > arr[j +1].id){
                             Student student = arr[j];
                             arr[j] = arr[j+1];
